@@ -1,0 +1,10 @@
+// A configured version of the core library. Other stylesheets can use this to
+// ensure that they're all using the same configuration.
+
+@forward '@wwnds/core/index' with (
+    $primary-family: 'blue',                        // default: 'teal'
+    $base-family: 'gray',                           // default: 'navy'
+    $background-color: var(--nds-base-color-10),    // default: var(--nds-white)
+    $text-color: var(--nds-base-color-100),         // default: var(--nds-base-color-90)
+    $button-border-radius: var(--nds-radius-pill),  // default: var(--nds-radius-base)
+);

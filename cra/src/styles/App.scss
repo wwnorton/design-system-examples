@@ -1,5 +1,10 @@
+@use 'nds';
+
 .App {
+  --app-margin-y: #{nds.spacer('2rem')};
+
   text-align: center;
+  margin: var(--app-margin-y) 0;
 }
 
 .App-logo {
@@ -14,18 +19,16 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: calc(100vh - var(--app-margin-y) * 2);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
-  color: #61dafb;
+  color: var(--nds-link-color);
 }
 
 @keyframes App-logo-spin {
