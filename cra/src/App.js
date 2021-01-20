@@ -1,3 +1,4 @@
+import { Button } from '@wwnds/react';
 import logo from './logo.svg';
 import './styles/App.scss';
 
@@ -17,6 +18,7 @@ function App() {
         >
           Learn React
         </a>
+        <Button variant="solid">Use the Norton Design System</Button>
       </header>
     </div>
   );

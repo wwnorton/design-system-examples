@@ -2,4 +2,6 @@
 
 @use 'nds';
 
-@include nds.reset;
+// @include nds.tokens          // required in v1.1+
+@include nds.reset;             // use the HTML reset styling
+@include nds.button-style;      // use the button component styling

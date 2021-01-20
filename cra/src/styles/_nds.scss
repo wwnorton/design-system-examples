@@ -2,9 +2,15 @@
 // ensure that they're all using the same configuration.
 
 @forward '@wwnds/core/index' with (
+    // use role tokens to modify the global theme
     $primary-family: 'blue',                        // default: 'teal'
     $base-family: 'gray',                           // default: 'navy'
     $background-color: var(--nds-base-color-10),    // default: var(--nds-white)
     $text-color: var(--nds-base-color-100),         // default: var(--nds-base-color-90)
+
+    // use component tokens to modify component-scoped styling
+    // note: this may result in inconsistencies between components
     $button-border-radius: var(--nds-radius-pill),  // default: var(--nds-radius-base)
+    $button-padding-x: var(--nds-spacing-6),        // default: var(--nds-spacing-3)
+    $button-padding-y: var(--nds-spacing-5),        // default: var(--nds-spacing-2)
 );
