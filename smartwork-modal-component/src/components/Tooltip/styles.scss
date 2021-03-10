@@ -1,0 +1,28 @@
+@use '../../styles/nds';
+
+// set the tooltip styles in one stylesheet to facilitate more modular styles
+@include nds.tooltip-style;
+
+.nds-tooltip {
+    // this is custom for this implementation example
+    --background-color: var(--nds-white);
+
+    // style override (default is an undeclared token)
+    box-shadow: var(--nds-shadow-1);
+
+    // style addition (default doesn't have a border)
+    border: 1px solid var(--nds-base-color-40);
+}
+
+.nds-tooltip__content {
+    // style overrides
+    background-color: var(--background-color);
+    color: var(--nds-text-color);
+}
+
+.nds-tooltip__arrow {
+    // use the background-color for the arrow's color, which is used for its border
+    // via the `initial` keyword.
+    // note: this needs to be improved in a future release
+    color: var(--background-color) !important;
+}

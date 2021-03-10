@@ -1,0 +1,48 @@
+// import the configured design system
+@use '../../styles/nds';
+
+// Modal's close button has a tooltip so import the tooltip styles here too
+@use '../Tooltip/styles.scss';
+
+// include the default styles
+@include nds.modal-style;
+
+// override declarations for different parts of the modal
+
+.nds-modal {
+    box-shadow: var(--nds-shadow-3);
+}
+
+.nds-modal__header {
+    --nds-background-color: #1c2225;
+
+    background-color: #1c2225;
+    color: var(--nds-text-color-inverse);
+    padding: 1rem 0.75rem;
+}
+
+.nds-modal__close {
+    color: var(--nds-text-color-inverse);
+
+    // this shouldn't be necessary and will be fixed in a future release
+    transform: translate(
+        calc(-50% + 0.125rem + var(--nds-modal-border-width)),
+        calc(50% - 0.5rem - var(--nds-modal-border-width)),
+    );
+
+    &:not(:disabled):not(.disabled):hover {
+        background-color: mix(black, #1c2225, 5%);
+        color: var(--nds-text-color-inverse);
+
+        // this shouldn't be necessary and will be fixed in a future release
+        border-color: transparent;
+    }
+
+    &:not(:disabled):not(.disabled):active {
+        background-color: mix(black, #1c2225, 15%);
+        color: var(--nds-text-color-inverse);
+
+        // this shouldn't be necessary and will be fixed in a future release
+        border-color: transparent;
+    }
+}

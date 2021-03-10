@@ -1,0 +1,16 @@
+// A configured version of the core library. Other stylesheets can use this to
+// ensure that they're all using the same configuration.
+
+@forward '@wwnds/core/index' with (
+    $radius-base: 0,    // this sets the value of var(--nds-radius-base)
+
+    // customize modal tokens
+    // https://github.com/wwnorton/design-system/blob/main/packages/core/src/components/modal/tokens.scss
+    $modal-max-width-desktop-md: 720px,
+    $modal-max-width-desktop-lg: 1080px,
+    $modal-border-radius-desktop: 0,
+
+    // customize the tooltip tokens
+    // https://github.com/wwnorton/design-system/blob/main/packages/core/src/components/tooltip/tokens.scss
+    $tooltip-border-radius: 0,
+);

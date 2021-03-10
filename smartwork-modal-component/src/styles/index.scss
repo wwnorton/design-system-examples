@@ -1,0 +1,9 @@
+// Global styles
+
+@use 'nds';
+
+@include nds.tokens;        // set the :root custom properties. required in v1.1+
+@include nds.reset;         // use the HTML reset styling
+
+// optional: set button styles globally
+@include nds.button-style;
